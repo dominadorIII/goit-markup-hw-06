@@ -586,11 +586,20 @@ footer {
   transition-duration: var(--transition-duration);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.input-subscribe:focus {
+.input-subscribe:focus,
+.input-subscribe:hover {
   border-color: var(--iris);
 }
 .input-subscribe::placeholder {
   color: var(--white);
+
+  transition-property: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-subscribe:hover::placeholder,
+.input-subscribe:focus::placeholder {
+  color: var(--iris);
 }
 .button-subscribe {
   display: inline-flex;
@@ -615,6 +624,7 @@ footer {
 
   font-size: 16px;
   font-weight: 500;
+  text-transform: capitalize;
   line-height: 1.5em;
   letter-spacing: 0.64px;
 }
@@ -681,7 +691,7 @@ footer {
   background-color: var(--cornflower);
   border-style: solid;
   border-width: 1px;
-  border-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(46, 47, 66, 0.4);
   border-radius: 12px;
   cursor: pointer;
 
@@ -755,15 +765,17 @@ footer {
   transition-duration: var(--transition-duration);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.input-contact-info:focus {
+.input-contact-info:focus,
+.input-contact-info:hover {
   border-color: var(--iris);
 }
-.input-contact-info:focus + .icon-form {
+.input-contact-info:focus + .icon-form,
+.input-contact-info:hover + .icon-form {
   fill: var(--iris);
 }
 .icon-form {
   position: absolute;
-  width: 24px;
+  width: 18px;
   height: 24px;
   top: 50%;
   left: 16px;
@@ -810,9 +822,18 @@ footer {
   font-weight: 400;
   line-height: 1.16em;
   letter-spacing: 0.48px;
+
+  transition-property: colorr;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.input-comment:focus {
+.input-comment:focus,
+.input-comment:hover {
   border-color: var(--iris);
+}
+.input-comment:focus::placeholder,
+.input-comment:hover::placeholder {
+  color: var(--iris);
 }
 .form-checkbox-label {
   position: relative;
@@ -855,6 +876,9 @@ footer {
 }
 .input-form-checkbox:checked + .icon-modal-check {
   background-color: var(--ocean);
+  border-color: var(--ocean);
+}
+.form-checkbox-label:hover .icon-modal-check {
   border-color: var(--ocean);
 }
 .policy-link {
